@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AP3", "AP3\AP3.csproj", "{3F570573-599B-4061-82D2-C8A01E34A908}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F570573-599B-4061-82D2-C8A01E34A908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F570573-599B-4061-82D2-C8A01E34A908}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F570573-599B-4061-82D2-C8A01E34A908}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F570573-599B-4061-82D2-C8A01E34A908}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF81A8B8-645D-4992-A3C8-03E6B2552501}
+	EndGlobalSection
+EndGlobal
