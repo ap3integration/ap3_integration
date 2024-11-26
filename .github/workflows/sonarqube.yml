@@ -1,0 +1,22 @@
+name: Sonarqube
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - features/*
+
+
+jobs:
+  analyze:
+    name: Analyze source code
+    runs-on: ["self-hosted"]
+    
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Execute sonarqube scan
+        run: sonar-scanner -Dsonar.projectKey=ap3_integration -Dsonar.sources=. -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} -Dsonar.token=${{ secrets.SONAR_TOKEN }}
