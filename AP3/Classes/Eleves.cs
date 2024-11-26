@@ -17,4 +17,13 @@
         public string Promo { get => promo; set => promo = value; }
     }
 
+     abstract class Hello
+     {
+         private string name;
+
+         public Hello(string _name) {
+             name = _name;
+         }
+     }
+
 }
