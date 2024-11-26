@@ -19,4 +19,4 @@ jobs:
           fetch-depth: 0
 
       - name: Execute sonarqube scan
-        run: sonar-scanner -Dsonar.projectKey=ap3_integration -Dsonar.sources=. -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} -Dsonar.token=${{ secrets.SONAR_TOKEN }}
+        run: sonar-scanner -Dsonar.projectKey=ap3_integration -Dsonar.sources=./AP3/ -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} -Dsonar.token=${{ secrets.SONAR_TOKEN }}
