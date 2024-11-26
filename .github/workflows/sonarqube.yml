@@ -1,4 +1,4 @@
-name: Build
+name: Sonarqube
 
 on:
   push:
@@ -9,15 +9,14 @@ on:
 
 
 jobs:
-  build:
-    name: Build and analyze
+  analyze:
+    name: Analyze source code
     runs-on: ["self-hosted"]
     
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-      - uses: sonarsource/sonarqube-scan-action@v3
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+          fetch-depth: 0
+
+      - name: Execute sonarqube scan
+        run: sonar-scanner -Dsonar.projectKey=ap3_integration -Dsonar.sources=. -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} -Dsonar.token=${{ secrets.SONAR_TOKEN }}
